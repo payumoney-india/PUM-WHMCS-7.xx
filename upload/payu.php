@@ -119,7 +119,7 @@ function payu_link($params) {
 		# System Variables
 		$companyname = 'payu';
 		$systemurl = $params['systemurl'];
-	    $PostURL = "https://test.payu.in/_payment";
+	    $PostURL = "https://sandboxsecure.payu.in/_payment";
     	if($gatewaymode == 'Production')
 	      $PostURL = "https://secure.payu.in/_payment";
       
