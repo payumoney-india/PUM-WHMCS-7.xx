@@ -53,7 +53,7 @@ if($respSignature == $sentHashString)
 	if($response['status']=='success') {
     	# Successful
     
-	    addInvoicePayment($invoiceid, $transid, $amount, $gatewaymodule); # Apply Payment to Invoice: invoiceid, transactionid, amount paid, fees, modulename
+	addInvoicePayment($invoiceid, $transid, $amount, $fee, $gatewaymodule);  # Apply Payment to Invoice: invoiceid, transactionid, amount paid, fees, modulename
     	update_query("tblinvoices",array("notes"=>"PayUmoney"),array("id"=>$invoiceid));
 		logTransaction($GATEWAY["name"],$response,"Successful"); # Save to Gateway Log: name, data array, status
 	
